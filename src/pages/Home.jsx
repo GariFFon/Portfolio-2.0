@@ -23,6 +23,7 @@ import YashWork from '../components/YashWork'
 import Testimonials from '../components/Testimonials'
 
 import Footer from '../components/Footer'
+import Education from '../components/Education'
 
 
 // Lenis
@@ -171,6 +172,7 @@ function Home() {
       <YashWork />
 
       <FeaturedWork />
+      <Education />
       <Testimonials />
     </>
   ), []);

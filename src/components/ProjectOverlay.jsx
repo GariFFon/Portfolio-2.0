@@ -1,8 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import gsap from "gsap";
-import { Features } from '@/components/ui/features-10';
-import OverlayShadwayGallery from '@/components/OverlayShadwayGallery';
 
 const LOREM_IPSUM = [
   "From the onset, the ambition was clear: craft an experience that transcends utility. We deconstructed the core user journey, removing friction points to unearth a seamless flow. It wasn't just about placing elements on a screen; it was about orchestrating a rhythmic interaction between the user and the system.",
@@ -45,7 +43,7 @@ function PremiumProjectContent({
       // Scroll content entrance
       if (contentRef.current) {
         const items = contentRef.current.querySelectorAll("[data-reveal]");
-        gsap.fromTo(items,
+        gsap.fromTo(items, 
           { opacity: 0, y: 40 },
           { opacity: 1, y: 0, duration: 1, ease: "power3.out", stagger: 0.1, delay: 0.6 }
         );
@@ -57,7 +55,7 @@ function PremiumProjectContent({
 
   return (
     <div style={{ opacity: animateIn ? 1 : 0, transition: "opacity 0.6s ease" }} className="w-full bg-black min-h-screen text-white">
-
+      
       {/* ── Premium Hero Area ── */}
       <div className="relative w-full h-[85vh] md:h-[90vh] overflow-hidden flex flex-col justify-end bg-black">
         {/* Deep immersive image */}
@@ -68,7 +66,7 @@ function PremiumProjectContent({
             className="w-full h-full object-cover opacity-70"
           />
         </div>
-
+        
         {/* Signature Yash gradient to top */}
         <div className="absolute inset-0 z-10 pointer-events-none" style={{ background: "linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 40%, rgba(0,0,0,0.1) 100%)" }} />
         <div className="absolute inset-0 z-10 pointer-events-none" style={{ background: "linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0) 100%)" }} />
@@ -85,31 +83,15 @@ function PremiumProjectContent({
               {project.title}
             </h1>
           </div>
-
+          
           <div className="overflow-hidden">
-            <div className="hero-anim flex flex-col md:flex-row md:items-start lg:items-center gap-8 md:gap-12 mt-8">
-              <div className="flex flex-col gap-6 shrink-0">
-                  <div className="flex items-center gap-4">
-                    <div className="w-1.5 h-1.5 rounded-full bg-white shadow-[0_0_10px_rgba(255,255,255,0.4)]" />
-                    <p className="text-sm tracking-[0.2em] text-white/70 uppercase">Design & Engineering</p>
-                  </div>
-                  {project.link && (
-                     <a 
-                       href={project.link} 
-                       target="_blank" 
-                       rel="noopener noreferrer" 
-                       className="pointer-events-auto inline-flex items-center justify-center gap-4 px-8 py-3.5 rounded-full border border-white/20 bg-white/5 hover:bg-white/15 text-white hover:border-white/40 text-[0.65rem] font-semibold tracking-[0.25em] uppercase transition-all duration-300 group w-max"
-                     >
-                         <span>{project.title.toLowerCase().includes('exanor') ? 'View on Play Store' : 'Launch Project'}</span>
-                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" className="transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform">
-                             <path d="M7 17L17 7M17 7H7M17 7V17" />
-                         </svg>
-                     </a>
-                  )}
+            <div className="hero-anim flex flex-col md:flex-row md:items-center gap-6 md:gap-12 mt-8">
+              <div className="flex items-center gap-4">
+                <div className="w-1.5 h-1.5 rounded-full bg-white shadow-[0_0_10px_rgba(255,255,255,0.4)]" />
+                <p className="text-sm tracking-[0.2em] text-white/70 uppercase">Design & Engineering</p>
               </div>
-              
-              <div className="hidden lg:block w-12 h-px bg-white/20" />
-              <p className="text-lg md:text-xl lg:text-2xl font-light text-white/90 max-w-xl leading-relaxed">
+              <div className="hidden md:block w-12 h-px bg-white/20" />
+              <p className="text-xl md:text-2xl font-light text-white/90 max-w-xl leading-relaxed">
                 {project.summary}
               </p>
             </div>
@@ -119,113 +101,163 @@ function PremiumProjectContent({
 
       {/* ── Fluid Editorial Content ── */}
       <div ref={contentRef} id="premium-content" className="w-full relative z-20 bg-black">
-        <div className="w-full mx-auto px-6 md:px-12 lg:px-16 py-24 md:py-32 max-w-[120rem]">
+        <div className="max-w-7xl mx-auto px-6 md:px-16 lg:px-24 py-24 md:py-40">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 relative">
+            
+            {/* The Narrative (Left Column) */}
+            <div className="lg:col-span-7 pr-0 lg:pr-12">
+              <div data-reveal className="mb-20 relative">
+                <h3 className="text-[0.65rem] uppercase tracking-[0.4em] text-white/30 mb-10 flex items-center gap-6">
+                  <span className="w-10 h-px bg-white/10"></span>
+                  The Narrative
+                </h3>
+                <div className="space-y-12">
+                  {LOREM_IPSUM.map((text, i) => (
+                    <p key={i} className={i === 0 ? "text-[1.35rem] md:text-2xl font-light leading-[1.75] text-white/90 tracking-wide" : "text-base md:text-[1.15rem] font-light leading-[1.85] text-white/50 tracking-wide"}>
+                      {text}
+                    </p>
+                  ))}
+                </div>
+              </div>
+              
+              <div data-reveal className="mt-20 border-l border-[#00e5ff]/30 pl-8 md:pl-12 relative">
+                <div className="absolute top-0 left-0 w-[2px] h-12 bg-[#00e5ff] shadow-[0_0_15px_rgba(0,229,255,0.8)]" />
+                <h3 className="text-[0.65rem] uppercase tracking-[0.4em] text-[#00e5ff]/70 mb-6">Outcome Definition</h3>
+                <p className="text-xl md:text-3xl font-light leading-snug text-white/90 tracking-wide">
+                  {project.result}
+                </p>
+              </div>
+            </div>
 
-          <div data-reveal className="w-full relative">
-            <h3 className="text-[0.65rem] uppercase tracking-[0.4em] text-white/40 mb-12 flex items-center gap-6">
-              <span className="w-12 h-px bg-white/20"></span>
-              Project Overview
-            </h3>
+            {/* Metrics & Stack (Right Column) */}
+            <div className="lg:col-span-5 lg:pl-16 relative flex flex-col gap-20">
+              
+              {/* Innovative Glowing Comet Track Restyled to minimalist guiding light */}
+              <div className="hidden lg:block absolute left-0 top-0 bottom-0 w-[1px] bg-transparent">
+                <div 
+                  id="comet-track"
+                  className="w-[2px] -ml-[0.5px] transition-all duration-75 relative"
+                  style={{ 
+                    height: '0%',
+                    background: 'transparent',
+                  }}
+                >
+                  <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[6px] h-[6px] bg-[#00e5ff] rounded-full shadow-[0_0_15px_5px_rgba(0,229,255,0.8),0_0_30px_10px_rgba(0,229,255,0.4)]" />
+                </div>
+              </div>
 
-            <Features project={project} />
+              <div data-reveal>
+                <h3 className="text-[0.65rem] uppercase tracking-[0.4em] text-white/40 mb-8">Technologies</h3>
+                <div className="flex flex-wrap gap-4">
+                  {project.stack && project.stack.map((tech) => (
+                    <span
+                      key={tech}
+                      className="px-5 py-2.5 rounded-full text-[0.65rem] uppercase tracking-[0.2em] text-white/60 bg-[#0a0a0a] border border-white/5 hover:border-white/20 hover:text-white transition-all duration-300"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div data-reveal>
+                <h3 className="text-[0.65rem] uppercase tracking-[0.4em] text-white/40 mb-6">Core Focus</h3>
+                <p className="text-base text-white/60 font-light tracking-wide leading-relaxed">
+                  Experience Architecture, Interactive WebGL, Motion Systems, and System Engineering.
+                </p>
+              </div>
+              
+              <div data-reveal>
+                <h3 className="text-[0.65rem] uppercase tracking-[0.4em] text-white/40 mb-6">Date</h3>
+                <p className="text-sm text-white/80 font-light tracking-widest">2028</p>
+              </div>
+            </div>
+
           </div>
-
-        </div>
-
-        {/* ── Shadway 3D Photo Gallery ── */}
-        <div className="w-full">
-          <div className="w-full px-6 md:px-12 lg:px-16 max-w-[120rem] mx-auto mb-6">
-            <h3 className="text-[0.65rem] uppercase tracking-[0.4em] text-white/40 flex items-center gap-6">
-              <span className="w-12 h-px bg-white/20"></span>
-              Screenshots
-            </h3>
-          </div>
-          <OverlayShadwayGallery project={project} />
         </div>
 
         {/* ── Immersive Visual Gallery ── */}
         <div className="w-full pb-32 md:pb-48">
           <div data-reveal className="w-full px-6 md:px-16 lg:px-24 mb-12 md:mb-16">
-            <div className="w-full relative overflow-hidden bg-[#050505] border border-white/10 group hover:border-white/20 hover:bg-white/[0.02] transition-colors duration-700">
-              <CardDecorator />
-              {project.galleryVideo ? (
-                <div className="w-full aspect-video flex items-center justify-center bg-black">
-                  <video
-                    src={project.galleryVideo}
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    className="w-full h-full object-contain opacity-100"
-                  />
-                </div>
-              ) : (
-                <div className="w-full h-[60vh] md:h-[80vh]">
-                  <img
-                    src={`https://picsum.photos/1920/1080?random=${index + 100}`}
-                    alt="Full showcase"
-                    className="w-full h-full object-cover opacity-90 transition-transform duration-1000 group-hover:scale-[1.02]"
-                  />
-                </div>
-              )}
-            </div>
+             <div className="w-full relative overflow-hidden rounded-2xl bg-[#050505] border border-white/10 group hover:border-white/20 transition-all duration-700 shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
+                {/* Inner Ambient Shadow for Premium Feel */}
+                <div className="absolute inset-0 pointer-events-none z-10 rounded-2xl ring-1 ring-inset ring-white/5 opacity-50" />
+                
+                {project.galleryVideo ? (
+                  <div className="w-full aspect-video flex items-center justify-center bg-black">
+                    <video
+                      src={project.galleryVideo}
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      className="w-full h-full object-contain opacity-100"
+                    />
+                  </div>
+                ) : (
+                  <div className="w-full h-[60vh] md:h-[80vh]">
+                    <img
+                      src={`https://picsum.photos/1920/1080?random=${index + 100}`}
+                      alt="Full showcase"
+                      className="w-full h-full object-cover opacity-90 transition-transform duration-1000 group-hover:scale-[1.02]"
+                    />
+                  </div>
+                )}
+             </div>
           </div>
 
 
-          <div data-reveal className="grid grid-cols-1 md:grid-cols-2 gap-6 px-6 md:px-16 lg:px-24">
-            {/* Left Media (Video 2 or Image) */}
-            <div className="w-full h-[60vh] md:h-[70vh] lg:h-[85vh] relative overflow-hidden bg-[#050505] border border-white/10 group shadow-2xl flex items-center justify-center p-6 md:p-8 lg:p-10 transition-colors duration-700 hover:border-white/20 hover:bg-white/[0.02]">
-              <CardDecorator />
-              <div className="absolute inset-0 bg-gradient-to-t from-white/0 via-transparent to-white/[0.02] opacity-0 group-hover:opacity-100 transition-opacity duration-1000 pointer-events-none" />
-              
-              {project.galleryVideo2 ? (
-                <video
-                  src={project.galleryVideo2}
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  className="h-full w-auto max-w-full object-contain shadow-[0_20px_80px_rgba(0,0,0,0.8)] border border-white/10 transition-transform duration-1000 group-hover:scale-[1.02]"
-                />
-              ) : (
-                <img
-                  src={`https://picsum.photos/1000/1200?random=${index + 200}`}
-                  alt="Detail view 1"
-                  className="h-full w-full object-cover border border-white/10 opacity-90 transition-transform duration-1000 group-hover:scale-[1.02]"
-                />
-              )}
-            </div>
-
-            {/* Right Media (Video 3 or Image) */}
-            <div className="w-full h-[60vh] md:h-[70vh] lg:h-[85vh] relative overflow-hidden bg-[#050505] border border-white/10 group shadow-2xl flex items-center justify-center p-6 md:p-8 lg:p-10 transition-colors duration-700 hover:border-white/20 hover:bg-white/[0.02]">
-              <CardDecorator />
-              <div className="absolute inset-0 bg-gradient-to-t from-white/0 via-transparent to-white/[0.02] opacity-0 group-hover:opacity-100 transition-opacity duration-1000 pointer-events-none" />
-
-              {project.galleryVideo3 ? (
-                <video
-                  src={project.galleryVideo3}
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  className="h-full w-auto max-w-full object-contain shadow-[0_20px_80px_rgba(0,0,0,0.8)] border border-white/10 transition-transform duration-1000 group-hover:scale-[1.02]"
-                />
-              ) : (
-                <img
-                  src={`https://picsum.photos/1000/1200?random=${index + 300}`}
-                  alt="Detail view 2"
-                  className="h-full w-full object-cover border border-white/10 opacity-90 transition-transform duration-1000 group-hover:scale-[1.02]"
-                />
-              )}
-            </div>
+          <div data-reveal className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12 px-6 md:px-16 lg:px-24">
+             <div className="w-full aspect-[4/5] relative overflow-hidden rounded-2xl bg-[#050505] border border-white/10 group hover:border-white/20 transition-all duration-700 shadow-2xl">
+                <div className="absolute inset-0 pointer-events-none z-10 rounded-2xl ring-1 ring-inset ring-white/5 opacity-40" />
+                {project.galleryVideo2 ? (
+                    <div className="absolute inset-0 flex items-center justify-center p-20 lg:p-28">
+                        <video
+                            src={project.galleryVideo2}
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
+                            className="w-full h-full object-contain rounded-2xl shadow-[0_0_40px_rgba(0,0,0,0.8)] ring-1 ring-white/10 transition-transform duration-1000 group-hover:scale-[1.02]"
+                        />
+                    </div>
+                ) : (
+                    <img
+                      src={`https://picsum.photos/1000/1200?random=${index + 200}`}
+                      alt="Detail view 1"
+                      className="absolute inset-0 w-full h-full object-cover opacity-90 transition-transform duration-1000 group-hover:scale-[1.02]"
+                    />
+                )}
+             </div>
+             <div className="w-full aspect-[4/5] relative overflow-hidden rounded-2xl bg-[#050505] border border-white/10 group hover:border-white/20 transition-all duration-700 shadow-2xl">
+                <div className="absolute inset-0 pointer-events-none z-10 rounded-2xl ring-1 ring-inset ring-white/5 opacity-40" />
+                {project.galleryVideo3 ? (
+                    <div className="absolute inset-0 flex items-center justify-center p-20 lg:p-28">
+                        <video
+                            src={project.galleryVideo3}
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
+                            className="w-full h-full object-contain rounded-2xl shadow-[0_0_40px_rgba(0,0,0,0.8)] ring-1 ring-white/10 transition-transform duration-1000 group-hover:scale-[1.02]"
+                        />
+                    </div>
+                ) : (
+                    <img
+                      src={`https://picsum.photos/1000/1200?random=${index + 300}`}
+                      alt="Detail view 2"
+                      className="absolute inset-0 w-full h-full object-cover opacity-90 transition-transform duration-1000 group-hover:scale-[1.02]"
+                    />
+                )}
+             </div>
           </div>
         </div>
 
         {/* ── Majestic Navigation Footer ── */}
         <div className="grid grid-cols-1 md:grid-cols-2 w-full min-h-[40vh] border-t border-white/10 bg-[#050505]">
           {/* Previous Slot */}
-          <div
-            data-reveal
+          <div 
+            data-reveal 
             className={`relative flex flex-col items-center justify-center p-12 group transition-all duration-700 ${prevIndex !== null ? 'cursor-pointer hover:bg-white/[0.03]' : 'opacity-10 cursor-default'}`}
             onClick={() => prevIndex !== null && onNavigate(prevIndex)}
           >
@@ -245,8 +277,8 @@ function PremiumProjectContent({
           </div>
 
           {/* Next Slot */}
-          <div
-            data-reveal
+          <div 
+            data-reveal 
             className={`relative flex flex-col items-center justify-center p-12 group border-t md:border-t-0 md:border-l border-white/10 transition-all duration-700 ${nextIndex !== null ? 'cursor-pointer hover:bg-white/[0.03]' : 'opacity-10 cursor-default'}`}
             onClick={() => nextIndex !== null && onNavigate(nextIndex)}
           >
@@ -265,20 +297,11 @@ function PremiumProjectContent({
             )}
           </div>
         </div>
-
+        
       </div>
     </div>
   );
 }
-
-const CardDecorator = () => (
-    <>
-        <span className="border-[#c8b598]/40 absolute -left-px -top-px block size-3 border-l-2 border-t-2 z-20 pointer-events-none"></span>
-        <span className="border-[#c8b598]/40 absolute -right-px -top-px block size-3 border-r-2 border-t-2 z-20 pointer-events-none"></span>
-        <span className="border-[#c8b598]/40 absolute -bottom-px -left-px block size-3 border-b-2 border-l-2 z-20 pointer-events-none"></span>
-        <span className="border-[#c8b598]/40 absolute -bottom-px -right-px block size-3 border-b-2 border-r-2 z-20 pointer-events-none"></span>
-    </>
-);
 
 // ─── Overlay shell ───
 
@@ -288,7 +311,10 @@ export default function ProjectOverlay({
   projects,
 }) {
   const overlayRef = useRef(null);
+  const scrimRef = useRef(null);
+  const panelRef = useRef(null);
   const closeBtnRef = useRef(null);
+  const tlRef = useRef(null);
   const [isInDom, setIsInDom] = useState(false);
   const [displayedIndex, setDisplayedIndex] = useState(null);
   const isClosingRef = useRef(false);
@@ -304,79 +330,115 @@ export default function ProjectOverlay({
     setIsInDom(true);
   }, [activeProjectIndex]);
 
+  // ── Cinematic open animation ──
   useEffect(() => {
-    if (!isInDom || !overlayRef.current) return;
+    if (!isInDom || !panelRef.current || !scrimRef.current) return;
 
-    // Prevent body completely
+    // Lock scrolling
     document.documentElement.style.overflow = 'hidden';
     document.body.style.overflow = 'hidden';
-
-    // Disable lenis
     document.documentElement.setAttribute('data-lenis-prevent', 'true');
 
-    // Dramatic cinematic open from bottom
-    gsap.fromTo(
-      overlayRef.current,
-      {
-        autoAlpha: 1,
-        yPercent: 100,
-        scale: 0.9,
-        borderRadius: "40px",
-        transformOrigin: "bottom center"
-      },
-      {
-        yPercent: 0,
-        scale: 1,
-        borderRadius: "0px",
-        duration: 1.2,
-        ease: "expo.inOut"
-      }
-    );
+    // Wait one frame so React has committed the DOM — kills the stutter
+    requestAnimationFrame(() => {
+      const tl = gsap.timeline({ defaults: { ease: "power4.inOut" } });
+      tlRef.current = tl;
 
-    if (closeBtnRef.current) {
-      gsap.fromTo(
-        closeBtnRef.current,
-        { opacity: 0, scale: 0.8 },
-        { opacity: 1, scale: 1, duration: 0.8, delay: 0.3, ease: "power3.out" }
+      // 1. Dark scrim rises from nothing
+      tl.fromTo(
+        scrimRef.current,
+        { opacity: 0 },
+        { opacity: 1, duration: 0.45, ease: "power2.out" },
+        0
       );
-    }
+
+      // 2. Panel dramatically rises from the bottom with a slight overshoot
+      tl.fromTo(
+        panelRef.current,
+        {
+          y: "100vh",
+          scale: 0.92,
+          borderRadius: "32px",
+          opacity: 0,
+        },
+        {
+          y: "0vh",
+          scale: 1,
+          borderRadius: "0px",
+          opacity: 1,
+          duration: 1.0,
+          ease: "expo.out",
+        },
+        0.1 // slight overlap with scrim
+      );
+
+      // 3. Close button fades in at the end
+      if (closeBtnRef.current) {
+        tl.fromTo(
+          closeBtnRef.current,
+          { opacity: 0, y: -20 },
+          { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" },
+          0.65
+        );
+      }
+    });
   }, [isInDom]);
 
   useEffect(() => {
-    if (overlayRef.current && displayedIndex !== null) {
-      overlayRef.current.scrollTop = 0;
+    if (panelRef.current && displayedIndex !== null) {
+      panelRef.current.scrollTop = 0;
     }
   }, [displayedIndex]);
 
+  // ── Cinematic close — reverse the drama ──
   function doClose() {
-    if (isClosingRef.current || !overlayRef.current) return;
+    if (isClosingRef.current || !panelRef.current) return;
     isClosingRef.current = true;
-    gsap.killTweensOf(overlayRef.current);
-    if (closeBtnRef.current) {
-      gsap.to(closeBtnRef.current, {
-        opacity: 0,
-        scale: 0.8,
-        duration: 0.4,
-        ease: "power3.in"
-      });
-    }
 
-    gsap.to(overlayRef.current, {
-      yPercent: 100,
-      scale: 0.9,
-      borderRadius: "40px",
-      duration: 1.0,
-      ease: "power4.inOut",
+    // Kill any running tweens on panel
+    gsap.killTweensOf(panelRef.current);
+    gsap.killTweensOf(scrimRef.current);
+    if (closeBtnRef.current) gsap.killTweensOf(closeBtnRef.current);
+
+    const tl = gsap.timeline({
       onComplete: () => {
         document.documentElement.style.overflow = '';
         document.body.style.overflow = '';
         document.documentElement.removeAttribute('data-lenis-prevent');
         isClosingRef.current = false;
+        tlRef.current = null;
         setIsInDom(false);
         setDisplayedIndex(null);
         if (onClose) onClose();
       },
     });
+
+    // 1. Close button vanishes first
+    if (closeBtnRef.current) {
+      tl.to(closeBtnRef.current, {
+        opacity: 0,
+        y: -20,
+        duration: 0.25,
+        ease: "power3.in",
+      }, 0);
+    }
+
+    // 2. Panel sinks back down cinematically
+    tl.to(panelRef.current, {
+      y: "100vh",
+      scale: 0.92,
+      borderRadius: "32px",
+      opacity: 0,
+      duration: 0.85,
+      ease: "expo.in",
+    }, 0.05);
+
+    // 3. Scrim fades out
+    tl.to(scrimRef.current, {
+      opacity: 0,
+      duration: 0.4,
+      ease: "power2.in",
+    }, 0.45);
   }
 
   if (!isInDom || !mounted) return null;
@@ -385,11 +447,25 @@ export default function ProjectOverlay({
 
   return createPortal(
     <div className="fixed inset-0 pointer-events-none" style={{ zIndex: 99998 }}>
+      {/* ── Dark cinematic scrim ── */}
       <div
-        ref={overlayRef}
+        ref={scrimRef}
+        className="pointer-events-auto"
+        onClick={doClose}
+        style={{
+          position: "absolute",
+          inset: 0,
+          background: "rgba(0, 0, 0, 0.85)",
+          opacity: 0,
+        }}
+      />
+
+      {/* ── Main panel ── */}
+      <div
+        ref={panelRef}
         className="project-overlay pointer-events-auto"
         data-lenis-prevent="true"
-        onScroll={(e) => {
+        onScroll={() => {
           const content = document.getElementById('premium-content');
           if (content) {
             const rect = content.getBoundingClientRect();
@@ -404,36 +480,49 @@ export default function ProjectOverlay({
           }
         }}
         style={{
-          opacity: 0,
-          visibility: "hidden", // Completely physically prevents stutter in frame 1 before GSAP kicks in
           position: "absolute",
           inset: 0,
           background: "#030303",
           overflowY: "auto",
           overflowX: "hidden",
           overscrollBehavior: "contain",
-          transformOrigin: "bottom center",
-          cursor: "none"
+          cursor: "none",
+          // Start offscreen — GSAP takes over immediately
+          transform: "translateY(100vh) scale(0.92)",
+          borderRadius: "32px",
+          opacity: 0,
+          willChange: "transform, opacity, border-radius",
         }}
       >
-        {project && (
-          <PremiumProjectContent
-            key={displayedIndex}
-            index={displayedIndex}
-            totalProjects={projects.length}
-            project={project}
-            onNavigate={(newIndex) => { setDisplayedIndex(newIndex); }}
-            animateIn={true}
-          />
-        )}
+        {/* Overlay ref for legacy compatibility */}
+        <div ref={overlayRef}>
+          {project && (
+            <PremiumProjectContent
+              key={displayedIndex}
+              index={displayedIndex}
+              totalProjects={projects.length}
+              project={project}
+              onNavigate={(newIndex) => { setDisplayedIndex(newIndex); }}
+              animateIn={true}
+            />
+          )}
+        </div>
       </div>
 
-      {/* ── Fixed Pinned Close Button (Outside Animated Parent) ── */}
+      {/* ── Fixed close button ── */}
       <div className="pointer-events-auto">
         <button
           ref={closeBtnRef}
           onClick={doClose}
-          style={{ opacity: 0, transform: "scale(0.8)", position: "fixed", top: "2rem", right: "2rem", zIndex: 99999, cursor: "none" }}
+          style={{
+            opacity: 0,
+            transform: "translateY(-20px)",
+            position: "fixed",
+            top: "2rem",
+            right: "2rem",
+            zIndex: 99999,
+            cursor: "none",
+          }}
           className="flex items-center gap-4 px-8 py-4 rounded-full bg-white/[0.06] hover:bg-white/[0.12] border border-white/10 backdrop-blur-2xl transition-all duration-300 group active:scale-95"
         >
           <span className="text-[0.7rem] uppercase tracking-[0.25em] font-medium text-white/50 group-hover:text-white transition-colors">Close</span>
