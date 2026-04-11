@@ -30,7 +30,7 @@ const Navbar = () => {
                 logo={<div className="w-[120px] md:w-[150px]"></div>} 
                 extraHeaderElement={
                     <a 
-                        href="/resume.pdf" 
+                        href="https://cv-f10ffb.tiiny.site/" 
                         target="_blank"
                         rel="noreferrer"
                         className="text-[#c8b598] font-medium text-[0.65rem] md:text-xs tracking-[0.25em] uppercase px-5 py-2 md:px-6 md:py-2.5 rounded-full border border-[#c8b598]/20 bg-black/80 backdrop-blur-xl hover:bg-[#c8b598]/10 hover:border-[#c8b598]/50 transition-all duration-500 pointer-events-auto"
