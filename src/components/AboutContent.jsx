@@ -38,7 +38,7 @@ const AboutContent = () => {
                     </div>
                     
                     <p className="text-sm md:text-base text-neutral-400 mb-8 leading-relaxed max-w-sm font-light">
-                        i'm yash. full-stack dev blending hard-core logic with killer aesthetics. i build digital experiences that are fast, scalable, and stupidly good-looking.
+                        i'm gourav dash (gariffon). software dev blending hard-core logic with clean aesthetics. i build high-performance, scalable apps that are fast and stupidly good-looking.
                     </p>
                 </div>
 

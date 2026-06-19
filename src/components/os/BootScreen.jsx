@@ -272,11 +272,11 @@ export default function BootScreen({ initialPhase = 'booting', onComplete, onShu
                         >
                             {/* User Avatar */}
                             <div className="w-48 h-48 md:w-60 md:h-60 rounded-full shadow-2xl overflow-hidden flex items-center justify-center bg-zinc-800/80 border border-white/10 relative">
-                                <img src={logGif} alt="Yash Patil" className="w-full h-full object-cover" />
+                                <img src={logGif} alt="Gourav Dash" className="w-full h-full object-cover" />
                             </div>
                             
                             {/* Name and State */}
-                            <h2 className="text-4xl md:text-5xl font-semibold tracking-wide drop-shadow-xl mt-4">Yash Patil</h2>
+                            <h2 className="text-4xl md:text-5xl font-semibold tracking-wide drop-shadow-xl mt-4">Gourav Dash</h2>
 
                             {isLoggingIn ? (
                                 <div className="flex flex-col items-center justify-center gap-6 mt-6">

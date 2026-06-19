@@ -35,7 +35,7 @@ const Footer = () => {
                             {['Home', 'About', 'Projects', 'Contact'].map(item => (
                                 <li key={item}>
                                     <a 
-                                        href={item === 'Contact' ? 'mailto:yashbhosale8329@gmail.com' : `#${item.toLowerCase()}`} 
+                                        href={item === 'Contact' ? 'mailto:gaurav.dash05@gmail.com' : `#${item.toLowerCase()}`} 
                                         className="hover:text-white transition-colors duration-300 drop-shadow-md"
                                     >
                                         {item}
@@ -50,9 +50,9 @@ const Footer = () => {
                         <h3 className="text-xs tracking-[0.2em] text-white/50 uppercase mb-8 font-semibold drop-shadow-md">Socials</h3>
                         <ul className="flex flex-col gap-5 text-white/90 text-[16px] tracking-wide font-light">
                             {[
-                                { name: 'LinkedIn', url: 'https://www.linkedin.com/in/yash-patil-dev' },
-                                { name: 'GitHub', url: 'https://github.com/Yash77179' },
-                                { name: 'LeetCode', url: 'https://leetcode.com/u/yash7717/' }
+                                { name: 'LinkedIn', url: 'https://www.linkedin.com/in/gourav-dash-gariffon/' },
+                                { name: 'GitHub', url: 'https://github.com/GariFFon' },
+                                { name: 'LeetCode', url: 'https://leetcode.com/u/GariFFon/' }
                             ].map(item => (
                                 <li key={item.name}>
                                     <a href={item.url} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors duration-300 drop-shadow-md">
@@ -92,7 +92,7 @@ const Footer = () => {
             {/* Giant Background Text Container - Absolute Center Bottom */}
             <div className="absolute bottom-0 left-0 right-0 top-0 flex items-end justify-center pointer-events-none select-none overflow-hidden z-[5]">
                 <h1 className="text-[13vw] lg:text-[15.5vw] font-black text-white/[0.05] leading-[0.75] tracking-tighter whitespace-nowrap translate-y-[10%] drop-shadow-2xl">
-                    YASH PATIL
+                    GOURAV DASH
                 </h1>
             </div>
         </footer>

@@ -24,7 +24,7 @@ const certificates = [
     name: "Data Structures & Algorithms Mastery",
     designation: "Cipher Schools",
     src: certCipher,
-    link: "https://cipher-other-assets.s3.ap-south-1.amazonaws.com/certificates/TC_yashbhosale8329%40gmail.com_CS2025-14755",
+    link: "https://cipherschools.com/certificates",
   },
   {
     quote: "Analyzed network phenomena like cascading behavior, homophily, and power laws through advanced Graph Theory. This elite-level insight into sociological intelligence allows me to architect incredibly viral, responsive, and widely interconnected platforms.",

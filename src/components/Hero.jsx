@@ -47,8 +47,8 @@ const Hero = React.memo(({ isDesktop, isLoading }) => {
                             </svg>
                         </div>
                         <div className="flex flex-col gap-1">
-                            <span className="text-[0.65rem] uppercase tracking-[0.3em] text-white font-bold">Yash</span>
-                            <span className="text-[0.5rem] uppercase tracking-[0.2em] text-white/50">Full Stack Dev</span>
+                            <span className="text-[0.65rem] uppercase tracking-[0.3em] text-white font-bold">Gourav</span>
+                            <span className="text-[0.5rem] uppercase tracking-[0.2em] text-white/50">Software Dev</span>
                         </div>
                     </div>
                     

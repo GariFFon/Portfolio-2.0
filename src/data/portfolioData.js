@@ -86,7 +86,7 @@ export const projects = [
     },
     {
         title: 'Deadlock Detection Simulator',
-        link: 'https://yash77179.github.io/Deadlock-Detection-Simulator/',
+        link: 'https://gariffon.github.io/Deadlock-Detection-Simulator/',
         image: deadlockImg,
         galleryVideo: deadlockVideo1,
         galleryVideo2: deadlockVideo2,
@@ -142,32 +142,32 @@ export const stats = [
 
 export const testimonials = [
     {
-        quote: 'Yash translates ambiguous ambition into interfaces that feel inevitable. Every detail carries intent.',
+        quote: 'Gourav translates complex problems into clean, elegant systems. Every solution carries clarity and intent.',
         author: 'Priya Nair — CPO, Lumen Labs',
         imgSrc: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=200&h=200&auto=format&fit=crop'
     },
     {
-        quote: 'He is the rare designer-engineer who can run discovery with execs in the morning and push production-ready code that night.',
+        quote: 'He is the rare developer who can architect a backend in the morning and build a polished UI that night.',
         author: 'Leo Martín — Head of Product, Flux Mobility',
         imgSrc: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&h=200&auto=format&fit=crop'
     },
     {
-        quote: 'Working with Yash elevated our entire product vision. His ability to bridge design and engineering is unmatched.',
+        quote: 'Working with Gourav elevated our entire product vision. His ability to bridge design and engineering is unmatched.',
         author: 'Sarah Chen — Engineering Lead, TechFlow',
         imgSrc: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=200&h=200&auto=format&fit=crop'
     },
     {
-        quote: 'The attention to micro-interactions and user experience details sets Yash apart. Every pixel has purpose.',
+        quote: 'The attention to performance and user experience details sets Gourav apart. Every feature has purpose.',
         author: 'Marcus Rodriguez — Design Director, Creative Studio',
         imgSrc: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&h=200&auto=format&fit=crop'
     },
     {
-        quote: 'Yash delivered not just designs, but a complete design system that our team still uses today. Incredible work.',
+        quote: 'Gourav delivered not just code, but a complete scalable architecture that our team still relies on today. Incredible work.',
         author: 'Emily Watson — Product Manager, InnovateCo',
         imgSrc: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=200&h=200&auto=format&fit=crop'
     },
     {
-        quote: 'His React implementations are clean, performant, and maintainable. A true full-stack designer.',
+        quote: 'His React implementations are clean, performant, and maintainable. A true full-stack engineer.',
         author: 'David Kim — CTO, StartupHub',
         imgSrc: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=200&h=200&auto=format&fit=crop'
     },

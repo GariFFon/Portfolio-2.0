@@ -11,11 +11,10 @@ const Experience = () => {
                         <p className="text-xs uppercase tracking-[0.4em] text-white/60">Experience</p>
                     </div>
                     <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium leading-[1.1] tracking-tight text-transparent bg-clip-text bg-linear-to-b from-white via-white to-white/50">
-                        Leading teams where design, product, and code intersect.
+                        Building, leading, and shipping real-world solutions.
                     </h2>
                     <p className="text-sm md:text-base text-white/60 leading-relaxed">
-                        Roles where I owned the interface layer, but also the way it connected to product strategy and shipping
-                        reality.
+                        Roles where I owned full product life-cycles — from ideation and prototyping to deploying scalable, production-ready systems.
                     </p>
                 </div>
                 <div className="space-y-6 about-reveal-right">
@@ -30,24 +29,24 @@ const Experience = () => {
                                     <span className="text-lg">01</span>
                                 </div>
                                 <div>
-                                    <h3 className="text-2xl text-white group-hover:text-white transition-colors">Lead Product Designer</h3>
-                                    <p className="text-xs uppercase tracking-[0.2em] text-white/40 mt-1">Flux Mobility · 2022 — Present</p>
+                                    <h3 className="text-2xl text-white group-hover:text-white transition-colors">President — Atal Tinkering Laboratory (ATL)</h3>
+                                    <p className="text-xs uppercase tracking-[0.2em] text-white/40 mt-1">ATL · 2019 — 2023</p>
                                 </div>
                             </div>
                             <div className="hidden md:block px-3 py-1 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-[0.6rem] uppercase tracking-[0.2em] text-emerald-400">
-                                Current Role
+                                Award Winner
                             </div>
                         </div>
 
                         <div className="pl-0 md:pl-[4rem] space-y-4">
                             <p className="text-white/70 text-sm leading-relaxed group-hover:text-white/90 transition-colors">
-                                Steering the design of a mobility OS for autonomous delivery fleets — from system maps and interface states to the components engineers plug into.
+                                Started as a member and rose to become president of the Atal Tinkering Laboratory — built several award-winning hardware projects and led teams through national hackathons.
                             </p>
                             <ul className="space-y-2">
                                 {[
-                                    'Directed a cross-functional squad shipping the mobility OS for autonomous delivery fleets.',
-                                    'Built a modular UI kit that reduced feature build time by 45% and enabled theming for OEM partners.',
-                                    'Created telemetry dashboards with predictive states, shortening ops escalations from 30 min to 8 min.'
+                                    'Won the prestigious "Inspire Manak Awards" for "Smart-Safety Helmet" designed for construction workers — prize of ₹10,000.',
+                                    'Led cross-functional teams through national-level hackathons, winning multiple competitions.',
+                                    'Prototyped IoT and embedded systems solutions, developing skills in innovation and project management.'
                                 ].map((item, i) => (
                                     <li key={i} className="flex items-start gap-3 text-sm text-white/50 group-hover:text-white/70 transition-colors">
                                         <span className="mt-1.5 w-1 h-1 rounded-full bg-white/30 group-hover:bg-white/60"></span>
@@ -69,21 +68,21 @@ const Experience = () => {
                                     <span className="text-lg">02</span>
                                 </div>
                                 <div>
-                                    <h3 className="text-2xl text-white group-hover:text-white transition-colors">Senior Product Designer</h3>
-                                    <p className="text-xs uppercase tracking-[0.2em] text-white/40 mt-1">Lumen Labs · 2019 — 2022</p>
+                                    <h3 className="text-2xl text-white group-hover:text-white transition-colors">Full-Stack Developer — Exanor</h3>
+                                    <p className="text-xs uppercase tracking-[0.2em] text-white/40 mt-1">Personal Project · 2026</p>
                                 </div>
                             </div>
                         </div>
 
                         <div className="pl-0 md:pl-[4rem] space-y-4">
                             <p className="text-white/70 text-sm leading-relaxed group-hover:text-white/90 transition-colors">
-                                Shaping an omni-channel retail intelligence platform, from research and journey maps to motion languages adopted across marketing and product.
+                                Architected and shipped a global-ready commerce &amp; operations platform — billing, inventory, and delivery tracking functioning as one connected system across Flutter, React, and Node.js.
                             </p>
                             <ul className="space-y-2">
                                 {[
-                                    'Ran research sprints across EU and APAC to define the omni-channel retail intelligence platform.',
-                                    'Piloted a motion language that now powers 18+ marketing launches and the company design system.',
-                                    'Partnered with data science to visualize confidence intervals, making models explainable to execs.'
+                                    'Built AI-powered billing and inventory platform with 0% commission marketplace on AWS (EC2/S3).',
+                                    'Reduced manual operational workload by up to 40% through real-time data sync and automation.',
+                                    'Engineered secure Node.js/Express backend with JWT & RBAC auth, handling multi-tenant data at scale.'
                                 ].map((item, i) => (
                                     <li key={i} className="flex items-start gap-3 text-sm text-white/50 group-hover:text-white/70 transition-colors">
                                         <span className="mt-1.5 w-1 h-1 rounded-full bg-white/30 group-hover:bg-white/60"></span>

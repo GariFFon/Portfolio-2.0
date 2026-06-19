@@ -96,7 +96,7 @@ const ScrollLogo = () => {
                 }}
             >
                 {/* Apply the filter to the text elements */}
-                <span className="text-white font-bold tracking-[-0.08em] scale-[1.1] inline-block origin-left">YASH</span>
+                <span className="text-white font-bold tracking-[-0.08em] scale-[1.1] inline-block origin-left">GOURAV</span>
             </motion.a>
         </>
     );

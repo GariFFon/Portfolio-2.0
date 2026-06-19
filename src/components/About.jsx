@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { ContainerScroll } from './ui/container-scroll-animation';
 import AboutContent from './AboutContent';
 import { Play } from 'lucide-react';
-import yashVideo from '../assets/yash.webm';
+import bgVideo from '../assets/yash.webm';
 import tabletWebm from '../assets/tablet/tablet.webm';
 import { GlassButton } from './ui/glass-button';
 
@@ -78,7 +78,7 @@ const About = () => {
                             ref={videoRef}
                             className="w-full h-full object-cover"
                             style={{ willChange: 'transform', transform: 'translateZ(0)' }}
-                            src={yashVideo}
+                            src={bgVideo}
                             autoPlay
                             loop
                             muted
@@ -162,7 +162,7 @@ const About = () => {
                         {/* Bottom Label - Permanently Visible */}
                         <div className="relative z-10 w-full flex justify-center">
                             <span className="text-[0.6rem] md:text-xs uppercase tracking-[0.5em] text-white/30 font-medium">
-                                Yash.OS Architecture
+                                Gourav.OS Architecture
                             </span>
                         </div>
                      </div>

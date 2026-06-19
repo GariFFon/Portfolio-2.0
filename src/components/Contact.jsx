@@ -76,12 +76,12 @@ const Contact = ({ activeSection, isDesktop }) => {
                     </div>
 
                     <h2 className="text-4xl md:text-6xl lg:text-7xl font-medium tracking-tight text-white leading-[1.1]">
-                        Ready to build the <span className="italic text-white/50">next big thing</span> starting Summer ‘25.
+                        Ready to build the <span className="italic text-white/50">next big thing</span> together.
                     </h2>
 
                     <p className="text-sm md:text-base text-white/60 max-w-2xl mx-auto leading-relaxed tracking-wide">
-                        I blend React, Tailwind, and motion design to ship polished UI. Currently exploring roles where I can
-                        prototype fast, learn from seniors, and own student-to-production hand-offs.
+                        I blend React, Node.js, and clean architecture to ship high-performance apps. Currently exploring roles where I can
+                        solve complex problems, grow fast, and own projects end-to-end.
                     </p>
                 </div>
                 <div className="max-w-3xl mx-auto w-full">
@@ -99,9 +99,9 @@ const Contact = ({ activeSection, isDesktop }) => {
                                     <div className="flex items-center gap-3 text-[0.55rem] uppercase tracking-[0.15em] text-white/80 font-medium">
                                         <span className="hover:text-white transition-colors cursor-default">React</span>
                                         <span className="text-white/20">/</span>
-                                        <span className="hover:text-white transition-colors cursor-default">Three.js</span>
+                                        <span className="hover:text-white transition-colors cursor-default">Node.js</span>
                                         <span className="text-white/20">/</span>
-                                        <span className="hover:text-white transition-colors cursor-default">Figma</span>
+                                        <span className="hover:text-white transition-colors cursor-default">C++</span>
                                     </div>
                                 </div>
                             </div>
@@ -120,9 +120,9 @@ const Contact = ({ activeSection, isDesktop }) => {
 
                                 {/* Items */}
                                 {[
-                                    { id: 'resume', label: 'Résumé', href: '/YashPatil-Resume.pdf', external: false },
-                                    { id: 'linkedin', label: 'LinkedIn', href: 'https://www.linkedin.com', external: true },
-                                    { id: 'email', label: 'Email Me', href: 'mailto:hello@yashpatil.design', external: false }
+                                    { id: 'resume', label: 'Résumé', href: '/files/(Updated)GouravDash.pdf', external: false },
+                                    { id: 'linkedin', label: 'LinkedIn', href: 'https://www.linkedin.com/in/gourav-dash-gariffon/', external: true },
+                                    { id: 'email', label: 'Email Me', href: 'mailto:gaurav.dash05@gmail.com', external: false }
                                 ].map((item) => (
                                     <a
                                         key={item.id}
@@ -150,7 +150,7 @@ const Contact = ({ activeSection, isDesktop }) => {
                                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                                 <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-emerald-500"></span>
                             </span>
-                            <span className="text-[0.5rem] uppercase tracking-[0.2em] text-white/50">Available for Summer '25</span>
+                            <span className="text-[0.5rem] uppercase tracking-[0.2em] text-white/50">Open to Work</span>
                         </div>
                     </div>
                 </div>

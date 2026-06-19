@@ -10,7 +10,7 @@ import { MeshLineGeometry, MeshLineMaterial } from 'meshline';
 // replace with your own imports, see the usage snippet for details
 import cardGLB from '../assets/lanyard/card.glb';
 import lanyard from '../assets/lanyard/lanyard.png';
-import yashPhoto from '../assets/yash.png';
+import gouravPhoto from '../assets/gourav.png';
 
 import { Color, Vector3, ClampToEdgeWrapping, CatmullRomCurve3, RepeatWrapping } from 'three';
 import './Lanyard.css';
@@ -88,7 +88,7 @@ function Band({ maxSpeed = 50, minSpeed = 0, isMobile = false }) {
   const segmentProps = { type: 'dynamic', canSleep: true, colliders: false, angularDamping: 4, linearDamping: 4 };
   const { nodes, materials } = useGLTF(cardGLB);
   const texture = useTexture(lanyard);
-  const cardFaceTexture = useTexture(yashPhoto);
+  const cardFaceTexture = useTexture(gouravPhoto);
 
   // Fix texture mapping - the card model's UVs expect a different aspect ratio
   // than our tall portrait photo, causing extreme zoom. We scale down vertically.

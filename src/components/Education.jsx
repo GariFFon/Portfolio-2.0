@@ -7,22 +7,22 @@ gsap.registerPlugin(ScrollTrigger);
 
 const educationData = [
   {
-    degree: "B.Tech in Computer Science",
-    period: "Aug 2023 – Present",
+    degree: "B.Tech in Computer Science Engineering",
+    period: "2023 – Present",
     institution: "Lovely Professional University, Punjab, India",
-    grade: "CGPA: 8.42"
+    grade: "CGPA: Ongoing"
   },
   {
     degree: "Higher Secondary (12th - Science)",
-    period: "Apr 2022 – Mar 2023",
-    institution: "Jai Tuljabavani Science and Arts College, Maharashtra, India",
-    grade: "80%"
+    period: "2020 – 2023",
+    institution: "Lovely Public Senior Secondary School, PD Vihar, New Delhi",
+    grade: "Science & Mathematics"
   },
   {
     degree: "Secondary School (10th)",
-    period: "Apr 2020 – Mar 2021",
-    institution: "Meers MIT High School, Maharashtra, India",
-    grade: "91%"
+    period: "2019 – 2020",
+    institution: "Lovely Public Senior Secondary School, PD Vihar, New Delhi",
+    grade: "Atal Tinkering Laboratory — President"
   }
 ];
 

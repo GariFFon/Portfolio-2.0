@@ -153,9 +153,9 @@ export default function StartMenu() {
         <div className="mt-auto h-[72px] bg-black/30 border-t border-white/10 flex justify-between items-center px-8 md:px-12 -mx-0">
             <button className="flex items-center gap-3 hover:bg-white/10 p-2 pl-2 pr-4 rounded-md transition-colors cursor-pointer group">
                 <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-blue-600 to-purple-600 overflow-hidden relative border border-white/10 shadow-sm flex items-center justify-center">
-                     <span className="text-[10px] font-bold text-white">YP</span>
+                     <span className="text-[10px] font-bold text-white">GD</span>
                 </div>
-                <span className="text-xs font-medium text-gray-200 group-hover:text-white">Yash Patil</span>
+                <span className="text-xs font-medium text-gray-200 group-hover:text-white">Gourav Dash</span>
             </button>
             <div className="relative flex items-center">
                 <button 
